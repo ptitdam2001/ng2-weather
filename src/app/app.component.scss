@@ -1,0 +1,103 @@
+/* SVG SUNNY */
+
+/* CIRCLE */
+
+#sunny circle {
+    -webkit-animation: sunny_circle 2s forwards;
+    -moz-animation: sunny_circle 2s forwards;
+    animation: sunny_circle 2s forwards;
+}
+
+@-webkit-keyframes sunny_circle {
+    0% {stroke-dasharray: 100;stroke-dashoffset: 470;}
+    100% {stroke-dasharray: 470;stroke-dashoffset: 0;}
+}
+
+@-moz-keyframes sunny_circle {
+    0% {stroke-dasharray: 100;stroke-dashoffset: 470;}
+    100% {stroke-dasharray: 470;stroke-dashoffset: 0;}
+}
+
+@keyframes sunny_circle {
+    0% {stroke-dasharray: 100;stroke-dashoffset: 470;}
+    100% {stroke-dasharray: 470;stroke-dashoffset: 0;}
+}
+
+/* LINE */
+
+#sunny line {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    -webkit-animation: .5s sunny_line 1s forwards;
+    -moz-animation: .5s sunny_line 1s forwards;
+    animation: .5s sunny_line 1s forwards;
+}
+
+@-webkit-keyframes sunny_line {
+    0% {stroke-dasharray: 60;stroke-dashoffset: 60;}
+    100% {stroke-dasharray: 60;stroke-dashoffset: 0;}
+}
+
+@-moz-keyframes sunny_line {
+    0% {stroke-dasharray: 60;stroke-dashoffset: 60;}
+    100% {stroke-dasharray: 60;stroke-dashoffset: 0;}
+}
+
+@keyframes sunny_line {
+    0% {stroke-dasharray: 60;stroke-dashoffset: 60;}
+    100% {stroke-dasharray: 60;stroke-dashoffset: 0;}
+}
+
+/* SVG PARTIALLY */
+
+/* CLOUD */
+
+#partially path:nth-child(1) {
+    -webkit-animation: partially_cloud 2s forwards;
+    -moz-animation: partially_cloud 2s forwards;
+    animation: partially_cloud 2s forwards;
+}
+
+@-webkit-keyframes partially_cloud {
+    0% {stroke-dasharray: 730;stroke-dashoffset: 730;}
+    100% {stroke-dasharray: 730;stroke-dashoffset: 0;}
+}
+
+@-moz-keyframes partially_cloud {
+    0% {stroke-dasharray: 730;stroke-dashoffset: 730;}
+    100% {stroke-dasharray: 730;stroke-dashoffset: 0;}
+}
+
+@keyframes partially_cloud {
+    0% {stroke-dasharray: 730;stroke-dashoffset: 730;}
+    100% {stroke-dasharray: 730;stroke-dashoffset: 0;}
+}
+
+/* SUN */
+
+#partially path:nth-child(2) {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    opacity: 0;
+    -webkit-animation: 2s partially_sun 1s forwards;
+    -moz-animation: 2s partially_sun 1s forwards;
+    animation: 2s partially_sun 1s forwards;
+}
+
+@-webkit-keyframes partially_sun {
+    0% {opacity: 0;}
+    1% {stroke-dasharray: 240;stroke-dashoffset: 240;opacity: 1;}
+    100% {stroke-dasharray: 240;stroke-dashoffset: 480;opacity: 1;}
+}
+
+@-moz-keyframes partially_sun {
+    0% {opacity: 0;}
+    1% {stroke-dasharray: 240;stroke-dashoffset: 240;opacity: 1;}
+    100% {stroke-dasharray: 240;stroke-dashoffset: 480;opacity: 1;}
+}
+
+@keyframes partially_sun {
+    0% {opacity: 0;}
+    1% {stroke-dasharray: 240;stroke-dashoffset: 240;opacity: 1;}
+    100% {stroke-dasharray: 240;stroke-dashoffset: 480;opacity: 1;}
+}
