@@ -2,10 +2,11 @@
 	<div class="card-header">
 		<!-- INFO -->
 		<div class="left-side">
-		<h2 class="city">San Francisco</h2>
-		<span class="currently-weather">Sunny</span>
-		<div class="wind"><span class="wind-icon"></span>8<span class="mph">mph</span></div>
-		<span class="temperature">63°</span>
+		<h2 class="city">{{currentWeather?.name}}</h2>
+		<span class="currently-weather">{{currentWeather?.weather[0].description}}</span>
+		<div class="wind">
+			<span class="wind-icon"></span>{{currentWeather?.wind.speed | meterSecToKmHour | round}}<span class="mph">km/h</span></div>
+		<span class="temperature">{{currentWeather?.main.temp | round}}°c</span>
 		</div>
 		<div class="weather-icon">
 			<!-- PARTIALLY -->
@@ -26,7 +27,7 @@
 		<div class="header-bg" style="background-image: url(img/san-francisco.jpg)"></div>
 		<div class="clearfix"></div>
 	</div>
-	<div class="coming-weather">
+	<!--<div class="coming-weather">
 		<div class="col">
 			<span class="day">Mon</span>
 			<div class="weather-icon">
@@ -77,5 +78,5 @@
 			</div>
 		</div>		
 		<div class="clearfix"></div>
-	</div>
+	</div>-->
 </div>

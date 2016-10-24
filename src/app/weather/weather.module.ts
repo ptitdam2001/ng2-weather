@@ -1,6 +1,10 @@
+import { OpenWeatherMapService } from './service/open-weather-map.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurrentWeatherComponent, WeatherArroundComponent, WeatherPrevisionComponent } from './component/index';
+import { MeterSecToKmHourPipe } from './pipe/meter-sec-to-km-hour.pipe';
+import { RoundPipe } from './pipe/round.pipe';
+
 
 @NgModule({
   imports: [
@@ -9,12 +13,19 @@ import { CurrentWeatherComponent, WeatherArroundComponent, WeatherPrevisionCompo
   declarations: [
     CurrentWeatherComponent,
     WeatherArroundComponent,
-    WeatherPrevisionComponent
+    WeatherPrevisionComponent,
+    MeterSecToKmHourPipe,
+    RoundPipe
+  ],
+  providers: [
+    OpenWeatherMapService
   ],
   exports: [
     CurrentWeatherComponent,
     WeatherArroundComponent,
-    WeatherPrevisionComponent
+    WeatherPrevisionComponent,
+    MeterSecToKmHourPipe,
+    RoundPipe
   ]
 })
 export class WeatherModule { }
