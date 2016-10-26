@@ -1,7 +1,7 @@
 import { URLSearchParams } from '@angular/http';
 
 
-export interface Coordinates {
+export class Coordinates {
     lon: number;
     lat: number;
 }

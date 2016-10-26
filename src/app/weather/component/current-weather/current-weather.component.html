@@ -5,26 +5,14 @@
 		<h2 class="city">{{currentWeather?.name}}</h2>
 		<span class="currently-weather">{{currentWeather?.weather[0].description}}</span>
 		<div class="wind">
-			<span class="wind-icon"></span>{{currentWeather?.wind.speed | meterSecToKmHour | round}}<span class="mph">km/h</span></div>
+			<!--<span class="wind-icon"></span>-->
+			<i class="wind-icon wi wi-night-sleet"></i>{{currentWeather?.wind.speed | meterSecToKmHour | round}}<span class="mph">km/h</span></div>
 		<span class="temperature">{{currentWeather?.main.temp | round}}°c</span>
 		</div>
 		<div class="weather-icon">
-			<!-- PARTIALLY -->
-			<svg version="1.1" id="partially" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			width="284.211px" height="215.49px" viewBox="0 0 284.211 215.49" enable-background="new 0 0 284.211 215.49"
-			xml:space="preserve">
-			<g>
-			<path fill="none" stroke="#030404" stroke-width="10" stroke-miterlimit="10" d="M224.063,100.195
-			c-0.059,0-0.115,0.004-0.174,0.004c-2.263-32.052-28.963-57.356-61.591-57.356c-27.598,0-50.961,18.103-58.88,43.08
-			c-2.833-0.571-5.765-0.874-8.767-0.874c-23.84,0-43.251,18.912-44.078,42.551c-1.327-0.127-2.67-0.198-4.03-0.198
-			C23.6,127.402,5,146.001,5,168.946s18.6,41.544,41.544,41.544h177.52c30.457,0,55.147-24.69,55.147-55.147
-			C279.211,124.886,254.521,100.195,224.063,100.195z"/>
-			<path fill="none" stroke="#030404" stroke-width="10" stroke-miterlimit="10" d="M51.042,122.567
-			C30.616,112.425,16.576,91.352,16.576,67c0-34.242,27.758-62,62-62c27.608,0,51.001,18.045,59.029,42.984"/>
-			</g>
-			</svg>
+			<i class="wi {{currentWeather?.weather[0].id | weatherNameToIcon}}"></i>
 		</div>
-		<div class="header-bg" style="background-image: url(img/san-francisco.jpg)"></div>
+		<!--<div class="header-bg" style="background-image: url(img/san-francisco.jpg)"></div>-->
 		<div class="clearfix"></div>
 	</div>
 	<!--<div class="coming-weather">

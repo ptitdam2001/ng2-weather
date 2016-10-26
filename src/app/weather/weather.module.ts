@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CurrentWeatherComponent, WeatherArroundComponent, WeatherPrevisionComponent } from './component/index';
 import { MeterSecToKmHourPipe } from './pipe/meter-sec-to-km-hour.pipe';
 import { RoundPipe } from './pipe/round.pipe';
+import { WeatherNameToIconPipe } from './pipe/weather-name-to-icon.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RoundPipe } from './pipe/round.pipe';
     WeatherArroundComponent,
     WeatherPrevisionComponent,
     MeterSecToKmHourPipe,
-    RoundPipe
+    RoundPipe,
+    WeatherNameToIconPipe
   ],
   providers: [
     OpenWeatherMapService
@@ -25,6 +27,7 @@ import { RoundPipe } from './pipe/round.pipe';
     WeatherArroundComponent,
     WeatherPrevisionComponent,
     MeterSecToKmHourPipe,
+    WeatherNameToIconPipe,
     RoundPipe
   ]
 })

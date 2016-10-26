@@ -1,5 +1,7 @@
 :host {
-    
+
+    // @import './../../../../../node_modules/weather-icons/sass/weather-icons.scss';
+
     background-color: #fff;
     width: 350px;
     border-radius: 5px;
@@ -68,15 +70,15 @@
         font-weight: 300;
         line-height: 1em;
         margin-top: 5px;
-    }
 
-    span.wind-icon {
-        display: inline-block;
-        width: 20px;
-        background: url(../img/wind.png) no-repeat center / contain;
-        height: .8em;
-        vertical-align: bottom;
-        margin-right: 5px;
+        .wind-icon {
+            display: inline-block;
+            width: 20px;
+            // background: url(../img/wind.png) no-repeat center / contain;
+            height: .8em;
+            vertical-align: bottom;
+            margin-right: 5px;
+        }
     }
 
     span.mph {
@@ -100,6 +102,10 @@
         top: 50%;
         width: 30%;
         transform: translateY(-50%);
+
+        i {
+            font-size: 80px;
+        }
     }
 
     .header-bg {

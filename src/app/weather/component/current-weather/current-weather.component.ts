@@ -1,11 +1,14 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { OpenWeatherMapService } from '../../service/open-weather-map.service';
-import { WeatherSearchParams } from '../../service/classes';
+import { WeatherSearchParams, Coordinates } from '../../service/classes';
 
 @Component({
   selector: 'ngw-current-weather',
   templateUrl: './current-weather.component.html',
-  styleUrls: ['./current-weather.component.scss'],
+  styleUrls: [
+    './../../../../../node_modules/weather-icons/sass/weather-icons.scss',
+    './current-weather.component.scss'
+  ],
   providers: [
     OpenWeatherMapService
   ]
@@ -13,6 +16,7 @@ import { WeatherSearchParams } from '../../service/classes';
 export class CurrentWeatherComponent implements OnInit, OnChanges {
 
   @Input() city: string;
+  @Input() cordinates ?: Coordinates;
 
   public currentWeather;
 
@@ -22,15 +26,20 @@ export class CurrentWeatherComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes) {
-    if (changes.city.currentValue) {
-      let options = new WeatherSearchParams();
+    let options = new WeatherSearchParams();
 
+    if (changes.city.currentValue) {
       options.city = this.city;
 
       this.service.getCurrentWeather(options).subscribe(response => {
         this.currentWeather = response.json();
+      });
 
-        console.log(this.currentWeather, this.currentWeather.name);
+    } else if (changes.coordinates.currentValue) {
+      options.coordinates = this.cordinates;
+
+      this.service.getCurrentWeather(options).subscribe(response => {
+        this.currentWeather = response.json();
       });
     }
   }
