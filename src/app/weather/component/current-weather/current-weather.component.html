@@ -6,7 +6,8 @@
 		<span class="currently-weather">{{currentWeather?.weather[0].description}}</span>
 		<div class="wind">
 			<!--<span class="wind-icon"></span>-->
-			<i class="wind-icon wi wi-night-sleet"></i>{{currentWeather?.wind.speed | meterSecToKmHour | round}}<span class="mph">km/h</span></div>
+			<i class="wind-icon wi wi-strong-wind"></i>{{currentWeather?.wind.speed | meterSecToKmHour | round}}<span class="mph">km/h</span>
+		</div>
 		<span class="temperature">{{currentWeather?.main.temp | round}}°c</span>
 		</div>
 		<div class="weather-icon">

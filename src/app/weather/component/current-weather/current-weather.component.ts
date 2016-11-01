@@ -16,7 +16,7 @@ import { WeatherSearchParams, Coordinates } from '../../service/classes';
 export class CurrentWeatherComponent implements OnInit, OnChanges {
 
   @Input() city: string;
-  @Input() cordinates ?: Coordinates;
+  @Input() coordinates ?: Coordinates;
 
   public currentWeather;
 
@@ -36,7 +36,7 @@ export class CurrentWeatherComponent implements OnInit, OnChanges {
       });
 
     } else if (changes.coordinates.currentValue) {
-      options.coordinates = this.cordinates;
+      options.coordinates = this.coordinates;
 
       this.service.getCurrentWeather(options).subscribe(response => {
         this.currentWeather = response.json();

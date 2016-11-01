@@ -36,6 +36,7 @@ export class OpenWeatherMapService {
     params.set('lat', coordinates.lat.toString());
     params.set('cnt', count.toString());
     params.set('appid', API_KEY);
+    params.set('units', 'metric');
 
     return this.http.get(this.findUrl, {search: params});
   }
