@@ -2,8 +2,6 @@ import { GeolocationModule } from './geolocation/geolocation.module';
 import { WeatherModule } from './weather/weather.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
@@ -14,9 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     WeatherModule,
-    GeolocationModule,
-    FormsModule,
-    HttpModule
+    GeolocationModule.forRoot({key: 'AIzaSyDjDEkj5MloWhk9SBkZA37olm6qtwIekY4', format: 'json'})
   ],
   providers: [],
   bootstrap: [AppComponent]
