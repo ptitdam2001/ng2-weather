@@ -1,0 +1,64 @@
+$background: #11ccee;
+
+:host {
+    box-shadow: 1px 3px 3px $background;
+    background: $background;
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        .card {
+            display: block;
+            h2 {
+                text-align: left;
+                font-weight: bold;
+                font-size: .9em;
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #ababab;
+
+                .description {
+                    width: 50%;
+                    font-size: .8em;
+
+                    .wind {
+                        .wind-icon {
+                            padding-right: 5px;
+                        }
+                    }
+
+                    .temperature {
+                        font-size: 2em;
+                        font-weight: 100;
+                        margin-top: .5em;
+                        margin-bottom: .5em;
+                        display: block;
+                        line-height: 1em;
+                    }
+                }
+
+                .weather-icon {
+                    width: 50%;
+                    text-align: center;
+                    font-size: 50px;
+                    padding: 10px 5px;
+                }
+            }
+        }
+    }
+
+    .title {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 3px;
+        background: #ababab;
+
+    }
+}

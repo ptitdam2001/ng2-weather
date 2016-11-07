@@ -1,0 +1,6 @@
+<div>
+  <input placeholder="Search a town" [formControl]="term" type="text" />
+  <ul ng-if="items.length > 0">
+    <li *ngFor="let item of items | async" (click)="select(item)">{{item.formatted_address}}</li>
+  </ul>
+</div>
