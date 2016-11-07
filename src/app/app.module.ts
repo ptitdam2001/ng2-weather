@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    WeatherModule,
+    WeatherModule.forRoot({key: '59fd2768e2c9abcb3cf35e48643a34f5'}),
     GeolocationModule.forRoot({key: 'AIzaSyDjDEkj5MloWhk9SBkZA37olm6qtwIekY4', format: 'json'})
   ],
   providers: [],

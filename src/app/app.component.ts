@@ -18,4 +18,8 @@ export class AppComponent {
       lat: 43
     };
   }
+
+  public onSelectLocation(selected) {
+    this.currentCoordinates = selected;
+  }
 }
