@@ -28,14 +28,14 @@ export class CurrentWeatherComponent implements OnInit, OnChanges {
   ngOnChanges(changes) {
     let options = new WeatherSearchParams();
 
-    if (changes.city.currentValue) {
+    if (changes.city && changes.city.currentValue) {
       options.city = this.city;
 
       this.service.getCurrentWeather(options).subscribe(response => {
         this.currentWeather = response.json();
       });
 
-    } else if (changes.coordinates.currentValue) {
+    } else if (changes.coordinates && changes.coordinates.currentValue) {
       options.coordinates = this.coordinates;
 
       this.service.getCurrentWeather(options).subscribe(response => {
