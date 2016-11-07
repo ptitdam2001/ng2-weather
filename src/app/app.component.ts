@@ -3,8 +3,19 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: [
+    './../../node_modules/flexboxgrid/dist/flexboxgrid.css',
+    './app.component.scss'
+  ]
 })
 export class AppComponent {
-  title = 'app works!';
+
+  public currentCoordinates;
+
+  constructor() {
+    this.currentCoordinates = {
+      lon: 0,
+      lat: 43
+    };
+  }
 }

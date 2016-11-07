@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  My weather application
+</header>
+
+<div class="row">
+  <div class="menubar col-xs-1 col-sm-1 col-md-1 col-lg-1">
+
+  </div>
+  <div class="main col-lg-11 col-sm-11 col-md-11">
+    <!-- search navbar -->
+    <location-search-bar></location-search-bar>
+
+    <!-- main conten -->
+    <div class="row">
+      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+          <div class="box">
+            <ngw-current-weather [city]="'montpellier,France'"></ngw-current-weather>
+
+            <ngw-current-weather [city]="'alencon,France'"></ngw-current-weather>
+
+            <ngw-current-weather [city]="'lille,France'"></ngw-current-weather>
+
+            <ngw-current-weather [city]="'london'"></ngw-current-weather>
+          </div>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <div class="box">
+            <ngw-weather-arround [coordinates]="currentCoordinates"></ngw-weather-arround>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <ngw-weather-prevision [city]="'montpellier,France'"></ngw-weather-prevision>
+</div>
+
+<footer>
+</footer>
