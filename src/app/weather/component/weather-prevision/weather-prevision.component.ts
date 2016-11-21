@@ -99,4 +99,23 @@ export class WeatherPrevisionComponent implements OnInit, OnChanges {
       .subscribe(response => this._populateForecast(response));
   }
 
+  ngOnChanges(changes) {
+    let options = new WeatherSearchParams();
+
+    if (changes.city && changes.city.currentValue) {
+      options.city = this.city;
+
+      this.service.getForecast(options).subscribe(response => {
+        this.weathers = response.json().list;
+      });
+
+    } else if (changes.coordinates && changes.coordinates.currentValue) {
+      options.coordinates = this.coordinates;
+
+      this.service.getForecast(options).subscribe(response => {
+        this.weathers = response.json().list;
+      });
+    }
+  }
+
 }
