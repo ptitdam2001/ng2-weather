@@ -1,3 +1,20 @@
-<p>
-  weather-precision works!
-</p>
+<div>
+ <p>Weather prevision:</p>
+ <ul>
+     <li *ngFor="let item of weathers">
+         <div>date: {{item.dt}} - {{item.dt_txt}}</div>
+         <div>T° min {{item.main.temp_min}} - T° max {{item.main.temp_max}}</div>
+         <div>Humidity: {{item.main.humidity}}%</div>
+         <div>{{item.weather | json}}</div>
+
+         <div>cloudiness: {{item.clouds.all}}%</div>
+         <div>wind: {{item.wind.speed}} m/sec - direction: {{item.wind.deg | degToCompass}}, {{item.wind.deg | degToCardinal}}</div>
+         <div *ngIf="item.rain && item.rain['3h']">Rain volume: {{item.rain['3h']}} mm</div>
+         <div *ngIf="item.snow && item.snow['3h']">Snow volume: {{item.snow['3h']}}</div>
+     </li>
+ </ul>
+
+
+
+ <!--<div>{{ weathers | json}}</div>-->
+</div>
