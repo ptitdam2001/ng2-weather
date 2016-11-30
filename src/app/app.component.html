@@ -25,6 +25,7 @@
 
             <ngw-current-weather [city]="'london'"></ngw-current-weather>
             -->
+            <ngw-weather-prevision [coordinates]="currentCoordinates" ng-if="currentCoordinates" [height]="500"></ngw-weather-prevision>
           </div>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -35,10 +36,11 @@
     </div>
   </div>
 </div>
-
+<!--
 <div>
   <ngw-weather-prevision [city]="'montpellier,France'"></ngw-weather-prevision>
 </div>
+-->
 
 <footer>
 </footer>
