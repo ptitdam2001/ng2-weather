@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { LocationSearchComponent } from './component/index';
 import { GeocodeConfig } from './geocode-config';
 import { GoogleGeolocationService } from './service/google/google-geolocation.service';
+import { LocaleGeolocationService } from './service/locale-geolocation.service';
 
 @NgModule({
   imports: [
@@ -15,11 +16,11 @@ import { GoogleGeolocationService } from './service/google/google-geolocation.se
     ReactiveFormsModule
   ],
   declarations: [
-    LocationSearchComponent,
-    // GoogleGeolocationService
+    LocationSearchComponent
   ],
   providers: [
-    GoogleGeolocationService
+    GoogleGeolocationService,
+    LocaleGeolocationService
   ],
   exports: [
     LocationSearchComponent,

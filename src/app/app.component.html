@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
           <div class="box">
-            <ngw-current-weather [coordinates]="currentCoordinates" ng-if="currentCoordinates"></ngw-current-weather>
+            <ngw-current-weather [coordinates]="currentCoordinates" ng-if="currentCoordinates" [refreshMin]="30"></ngw-current-weather>
 
             <!--
             <ngw-current-weather [city]="'montpellier,France'"></ngw-current-weather>
@@ -25,20 +25,22 @@
 
             <ngw-current-weather [city]="'london'"></ngw-current-weather>
             -->
+            <ngw-weather-prevision [coordinates]="currentCoordinates" ng-if="currentCoordinates" [height]="500" [refreshMin]="1"></ngw-weather-prevision>
           </div>
       </div>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="box">
-            <ngw-weather-arround [coordinates]="currentCoordinates"></ngw-weather-arround>
+            <ngw-weather-arround [coordinates]="currentCoordinates" [height]="800"></ngw-weather-arround>
           </div>
       </div>
     </div>
   </div>
 </div>
-
+<!--
 <div>
   <ngw-weather-prevision [city]="'montpellier,France'"></ngw-weather-prevision>
 </div>
+-->
 
 <footer>
 </footer>
