@@ -1,11 +1,11 @@
 import { OpenWeatherMapService } from './service/open-weather-map.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CurrentWeatherComponent, WeatherArroundComponent, WeatherPrevisionComponent } from './component/index';
-import { MeterSecToKmHourPipe } from './pipe/meter-sec-to-km-hour.pipe';
-import { RoundPipe } from './pipe/round.pipe';
-import { WeatherNameToIconPipe } from './pipe/weather-name-to-icon.pipe';
 import { WeatherConfig } from './weather-config';
+import { CurrentWeatherComponent, WeatherArroundComponent, WeatherPrevisionComponent } from './component/index';
+
+import { MeterSecToKmHourPipe, RoundPipe, WeatherNameToIconPipe,
+  DegToCompassPipe, DegToCardinalPipe, MomentFormatPipe } from './pipe/index';
 
 
 @NgModule({
@@ -18,7 +18,10 @@ import { WeatherConfig } from './weather-config';
     WeatherPrevisionComponent,
     MeterSecToKmHourPipe,
     RoundPipe,
-    WeatherNameToIconPipe
+    WeatherNameToIconPipe,
+    DegToCompassPipe,
+    DegToCardinalPipe,
+    MomentFormatPipe
   ],
   providers: [
     OpenWeatherMapService
@@ -29,7 +32,10 @@ import { WeatherConfig } from './weather-config';
     WeatherPrevisionComponent,
     MeterSecToKmHourPipe,
     WeatherNameToIconPipe,
-    RoundPipe
+    RoundPipe,
+    DegToCompassPipe,
+    DegToCardinalPipe,
+    MomentFormatPipe
   ]
 })
 export class WeatherModule {

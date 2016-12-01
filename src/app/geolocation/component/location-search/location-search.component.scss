@@ -1,9 +1,18 @@
+$backgroundListItem: #fff;
+$backgroundListItemOver: #416399;
+
+
 :host {
     padding: 10px;
 
     input {
         width: 100%;
-        height: 30px;
+        padding: 0 5px;
+        border-radius: 5px;
+        height: 35px;
+        font-size: 20px;
+        box-shadow: 5px 1px black;
+        line-height: 35px;
     }
     ul {
         list-style: none;
@@ -16,12 +25,15 @@
         li {
             border-bottom: solid 1px #999;
             padding: 3px;
+            background: $backgroundListItem;
+            height: 30px;
+            line-height: 30px;
         }
         li:last-child {
             border-bottom: none;
         }
         li:hover {
-            background: #416399;
+            background: $backgroundListItemOver;
             cursor: pointer;
             color: #fff;
         }

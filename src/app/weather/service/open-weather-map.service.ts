@@ -10,6 +10,8 @@ export class OpenWeatherMapService {
 
   private url: string = API_URL + 'weather';
   private findUrl: string = API_URL + 'find';
+  private forecastUrl: string = API_URL + 'forecast';
+
   private http: Http;
   private key: string;
 
@@ -45,5 +47,17 @@ export class OpenWeatherMapService {
     params.set('units', 'metric');
 
     return this.http.get(this.findUrl, {search: params});
+  }
+
+  /**
+   * Get the weather forecast of a given area
+   * 
+   * @params params WeatherSearchParams
+   * @return Observable<Response>
+   * 
+   */
+  getForecast(params: WeatherSearchParams) {
+    let options = params.toUrlSearchParams(this.key);
+    return this.http.get(this.forecastUrl, {search: options});
   }
 }
