@@ -1,6 +1,6 @@
 import { OpenWeatherMapService } from '../../service/open-weather-map.service';
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import { Coordinates, WeatherSearchParams } from '../../service/classes';
+import { Coordinates } from '../../service/classes';
 
 @Component({
   selector: 'ngw-weather-arround',

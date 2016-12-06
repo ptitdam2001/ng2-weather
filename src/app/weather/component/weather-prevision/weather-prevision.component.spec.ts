@@ -1,11 +1,20 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { WeatherPrecisionComponent } from './weather-precision.component';
+import { WeatherPrevisionComponent } from './weather-prevision.component';
 
 describe('Component: WeatherPrecision', () => {
-  it('should create an instance', () => {
-    let component = new WeatherPrecisionComponent();
-    expect(component).toBeTruthy();
+
+  it ('should create an instance', () => {
+    TestBed.configureTestingModule({
+      declarations: [WeatherPrevisionComponent]
+    });
+
+    const fixture = TestBed.createComponent(WeatherPrevisionComponent);
+
+    // given a component instance with a pony input initialized
+    const _component = fixture.componentInstance;
+
+    expect(_component).toBeTruthy();
   });
 });

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LocaleGeolocationService } from './geolocation/service/locale-geolocation.service';
+// import { LocaleGeolocationService } from './geolocation/service/locale-geolocation.service';
+
+import { LocaleGeolocationService } from 'dsu-google-geolocation';
 
 @Component({
   selector: 'app-root',
